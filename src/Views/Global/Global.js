@@ -5,7 +5,7 @@ import Content from '../../Components/ViewBox/ViewBox';
 
 import styles from './Global-styles'
 
-export default function Local() {
+export default function Global() {
 
     const [loading, setLoading] = useState(true);
     const [data, setData] = useState();
@@ -18,23 +18,21 @@ export default function Local() {
             .finally(() => setLoading(false));
     }, []);
 
-    //console.log(data.data.update_date_time)
-
     return (
         <View style={styles.container}>
 
-            <View style={styles.heading}>
-
-                <Text style={styles.headingMainText}>COVID-19 Situation Report</Text>
-                <Text style={styles.headingSubText}>Last Update</Text>
-                {!loading &&
-                    <Text style={styles.headingTimeText}>{data.data.update_date_time}</Text>
-                }
-
-            </View>
-
             {!loading &&
-                <ScrollView>
+                <ScrollView style={styles.scrollview}>
+
+
+                    <View style={styles.heading}>
+
+                        <Text style={styles.headingMainText}>COVID-19 Situation Report</Text>
+                        <Text style={styles.headingSubText}>Last Update</Text>
+                        <Text style={styles.headingTimeText}>{data.data.update_date_time}</Text>
+
+                    </View>
+
 
                     <Content
                         firstBoxTitle={"Total Cases"}
