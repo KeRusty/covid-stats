@@ -2,9 +2,9 @@ import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({
     header: {
-        backgroundColor: '#000'
+        backgroundColor: '#6a59f2'
     },
     headerText: {
-        color: '#fff'
+        color: '#ffffff'
     }
 })
