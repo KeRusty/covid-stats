@@ -15,18 +15,18 @@ export default function ViewBox(props) {
     return (
         <View style={styles.container}>
 
-            <View style={styles.firstBox}>
+            <View style={styles.box}>
                 <Image style={styles.image} source={props.firstBoxImage === "total" ? TotalImage : props.firstBoxImage === "new" ? NewImage : props.firstBoxImage === "recover" ? RecoverImage : null} />
-                <Text style={styles.firstTextStyle}>{props.firstBoxTitle}</Text>
-                <Text style={styles.firstTextStyle}>{props.firstBoxContent}</Text>
+                <Text style={props.firstBoxImage === "total" ? styles.totalText : props.firstBoxImage === "new" ? styles.newText : props.firstBoxImage === "recover" ? styles.recoveredText : null}>{props.firstBoxTitle}</Text>
+                <Text style={props.firstBoxImage === "total" ? styles.totalText : props.firstBoxImage === "new" ? styles.newText : props.firstBoxImage === "recover" ? styles.recoveredText : null}>{props.firstBoxContent}</Text>
             </View>
 
-            <View style={styles.secondBox}>
+            <View style={styles.box}>
                 <Image style={styles.image} source={props.secondBoxImage === "active" ? ActiveImage : props.secondBoxImage === "quaratine" ? QuarantineImage : props.secondBoxImage === "death" ? DeathImage : null} />
-                <Text style={styles.seconTextStyle}>{props.secondBoxTitle}</Text>
-                <Text style={styles.firstTextStyle}>{props.secondBoxContent}</Text>
+                <Text style={props.secondBoxImage === "active" ? styles.activeText : props.secondBoxImage === "quaratine" ? styles.quarantineText : props.secondBoxImage === "death" ? styles.deathText : null}>{props.secondBoxTitle}</Text>
+                <Text style={props.secondBoxImage === "active" ? styles.activeText : props.secondBoxImage === "quaratine" ? styles.quarantineText : props.secondBoxImage === "death" ? styles.deathText : null}>{props.secondBoxContent}</Text>
             </View>
 
-        </View>
+        </View >
     );
 }
