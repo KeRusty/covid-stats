@@ -52,13 +52,13 @@ export default function Home() {
                         firstBoxTitle={"New Cases"}
                         firstBoxImage={"new"}
                         firstBoxContent={data.data.local_new_cases}
-                        secondBoxTitle={"Quartine Individuals"}
+                        secondBoxTitle={"Quarantined"}
                         secondBoxImage={"quaratine"}
                         secondBoxContent={data.data.local_total_number_of_individuals_in_hospitals}
                     />
 
                     <Content
-                        firstBoxTitle={"Recovered & Dischaged"}
+                        firstBoxTitle={"Recovered"}
                         firstBoxImage={"recover"}
                         firstBoxContent={data.data.local_recovered}
                         secondBoxTitle={"Deaths"}
