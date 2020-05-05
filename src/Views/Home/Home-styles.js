@@ -5,10 +5,24 @@ export default StyleSheet.create({
         flex: 1,
         backgroundColor: '#fff'
     },
-    header: {
-        backgroundColor: '#000'
+    heading: {
+        paddingVertical: 12,
+        justifyContent: 'center',
+        alignItems: 'center'
     },
-    headerText: {
-        color: '#fff'
+    headingMainText: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        color: '#2b244c'
+    },
+    headingSubText: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        color: '#2b244c'
+    },
+    headingTimeText: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: '#000000'
     }
 })

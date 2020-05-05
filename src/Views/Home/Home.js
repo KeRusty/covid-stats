@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View, ScrollView } from 'react-native';
-import { Header, Body, Title } from 'native-base';
+
+import Header from '../../Components/Header/Header';
 
 import styles from './Home-styles'
 
@@ -17,20 +18,24 @@ export default function Home() {
             .finally(() => setLoading(false));
     }, []);
 
-    console.log(data.data.update_date_time)
+    //console.log(data.data.update_date_time)
 
     return (
         <View style={styles.container}>
 
-            <Header style={styles.header}>
+            <Header />
 
-                <Body>
-                    <Title style={styles.headerText}>Header</Title>
-                </Body>
+            <View style={styles.heading}>
 
-            </Header>
+                <Text style={styles.headingMainText}>COVID-19 Situation Report</Text>
+                <Text style={styles.headingMainText}>Last Update</Text>
+                {!loading &&
+                    <Text style={styles.headingTimeText}>{data.data.update_date_time}</Text>
+                }
 
-            <Text>COVID-19 Situation Report</Text>
+            </View>
+
+
 
         </View>
     );
