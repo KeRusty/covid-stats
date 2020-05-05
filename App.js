@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { Root, View, Text } from 'native-base';
+import React, { useState } from 'react';
 import * as Font from 'expo-font';
 import { AppLoading } from 'expo';
 
