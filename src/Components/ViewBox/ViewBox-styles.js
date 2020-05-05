@@ -1,13 +1,12 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Dimensions } from 'react-native'
 
 export default StyleSheet.create({
     container: {
-        paddingHorizontal: 4,
         paddingVertical: 10,
-        justifyContent: 'space-evenly',
+        justifyContent: 'center',
         flexDirection: 'row'
     },
-    box: {
+    boxOne: {
         paddingVertical: 12,
         paddingHorizontal: 24,
         justifyContent: 'center',
@@ -15,6 +14,17 @@ export default StyleSheet.create({
         borderColor: '#e4e9ed',
         borderWidth: 1,
         borderRadius: 12,
+        marginRight: 12
+    },
+    boxTwo: {
+        paddingVertical: 12,
+        paddingHorizontal: 24,
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderColor: '#e4e9ed',
+        borderWidth: 1,
+        borderRadius: 12,
+        marginLeft: 12
     },
     image: {
         width: 100,
