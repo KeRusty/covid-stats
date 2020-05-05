@@ -22,9 +22,9 @@ export default function ViewBox(props) {
             </View>
 
             <View style={styles.box}>
-                <Image style={styles.image} source={props.secondBoxImage === "active" ? ActiveImage : props.secondBoxImage === "quaratine" ? QuarantineImage : props.secondBoxImage === "death" ? DeathImage : null} />
-                <Text style={props.secondBoxImage === "active" ? styles.activeText : props.secondBoxImage === "quaratine" ? styles.quarantineText : props.secondBoxImage === "death" ? styles.deathText : null}>{props.secondBoxTitle}</Text>
-                <Text style={props.secondBoxImage === "active" ? styles.activeText : props.secondBoxImage === "quaratine" ? styles.quarantineText : props.secondBoxImage === "death" ? styles.deathText : null}>{props.secondBoxContent}</Text>
+                <Image style={styles.image} source={props.secondBoxImage === "active" ? ActiveImage : props.secondBoxImage === "quaratine" ? QuarantineImage : props.secondBoxImage === "death" ? DeathImage : props.secondBoxImage === "new" ? NewImage : null} />
+                <Text style={props.secondBoxImage === "active" ? styles.activeText : props.secondBoxImage === "quaratine" ? styles.quarantineText : props.secondBoxImage === "death" ? styles.deathText : props.secondBoxImage === "new" ? styles.newText : null}>{props.secondBoxTitle}</Text>
+                <Text style={props.secondBoxImage === "active" ? styles.activeText : props.secondBoxImage === "quaratine" ? styles.quarantineText : props.secondBoxImage === "death" ? styles.deathText : props.secondBoxImage === "new" ? styles.newText : null}>{props.secondBoxContent}</Text>
             </View>
 
         </View >
