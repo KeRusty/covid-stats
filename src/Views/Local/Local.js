@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Text, View, ScrollView } from 'react-native';
 
 import Content from '../../Components/ViewBox/ViewBox';
+import Tests from '../../Components/PCRTestBox/PCRTestBox';
 
 import styles from './Local-styles'
 
@@ -18,23 +19,19 @@ export default function Local() {
             .finally(() => setLoading(false));
     }, []);
 
-    //console.log(data.data.update_date_time)
-
     return (
         <View style={styles.container}>
 
-            <View style={styles.heading}>
-
-                <Text style={styles.headingMainText}>COVID-19 Situation Report</Text>
-                <Text style={styles.headingSubText}>Last Update</Text>
-                {!loading &&
-                    <Text style={styles.headingTimeText}>{data.data.update_date_time}</Text>
-                }
-
-            </View>
-
             {!loading &&
-                <ScrollView>
+                <ScrollView contentContainerStyle={styles.scrollview}>
+
+                    <View style={styles.heading}>
+
+                        <Text style={styles.headingMainText}>COVID-19 Situation Report</Text>
+                        <Text style={styles.headingSubText}>Last Update</Text>
+                        <Text style={styles.headingTimeText}>{data.data.update_date_time}</Text>
+
+                    </View>
 
                     <Content
                         firstBoxTitle={"Total Cases"}
@@ -61,6 +58,10 @@ export default function Local() {
                         secondBoxTitle={"Deaths"}
                         secondBoxImage={"death"}
                         secondBoxContent={data.data.local_deaths}
+                    />
+
+                    <Tests
+                        content={data.data.total_pcr_testing_count}
                     />
 
                 </ScrollView>

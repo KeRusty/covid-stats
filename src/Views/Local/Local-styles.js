@@ -4,6 +4,10 @@ export default StyleSheet.create({
     container: {
         backgroundColor: '#fff'
     },
+    scrollview: {
+        height: 'auto',
+        justifyContent: 'center'
+    },
     heading: {
         paddingVertical: 12,
         justifyContent: 'center',
