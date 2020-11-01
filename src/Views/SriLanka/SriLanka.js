@@ -10,7 +10,7 @@ export default function SriLanka(props) {
     return (
         <View style={styles.container}>
 
-            <Header />
+            <Header showBack={true} nav={props} />
 
         </View>
     );

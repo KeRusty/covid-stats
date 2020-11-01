@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { Text, View, ScrollView } from 'react-native';
+import React, { useState } from 'react';
 import { Container, Content, Icon, Picker, Form } from "native-base"
 
 import styles from './CountryPicker-styles'
@@ -37,7 +36,7 @@ export default function CountryPicker(props) {
                         <Picker.Item label="United Arab Emirates" value="United Arab Emirates,UAE" />
                         <Picker.Item label="Brazil" value="Brazil,BR" />
                         <Picker.Item label="Russia" value="Russia,RU" />
-                        <Picker.Item label="Sri Lanka" value="Sri Lanka,LK" />
+                        <Picker.Item label="Italy" value="Italy,IT" />
                         <Picker.Item label="Philippines" value="Philippines,PH" />
                         <Picker.Item label="Thailand" value="Thailand,TH" />
 

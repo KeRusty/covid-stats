@@ -24,7 +24,7 @@ export default function Home(props) {
 
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.contentBox} onPress={() => { props.navigation.navigate('locationSelect'); }}>
+                <TouchableOpacity style={styles.contentBox} onPress={() => { props.navigation.navigate('locationSelect', { nav: props.navigation }); }}>
 
                     <Text style={styles.buttonText}>Country Picker</Text>
 

@@ -7,18 +7,10 @@ import Content from '../../Components/ViewBox/ViewBox';
 
 import styles from './LocationSelect-styles'
 
-export default function LocationSelect() {
+export default function LocationSelect(props) {
 
     const [loading, setLoading] = useState(true);
     const [data, setData] = useState();
-
-    /*useEffect(() => {
-        fetch('https://corona.lmao.ninja/v2/countries/United Arab Emirates?yesterday&strict&query%UAE')
-            .then((response) => response.json())
-            .then((json) => setData(json))
-            .catch((error) => console.error(error))
-            .finally(() => setLoading(false));
-    }, []);*/
 
     const onChange = useCallback((values) => {
 
@@ -35,12 +27,10 @@ export default function LocationSelect() {
 
     }, []);
 
-    console.log(data, "DATA")
-
     return (
         <View style={styles.container}>
 
-            <AppHeader title={"Select Location"} />
+            <AppHeader title={"Select Location"} showBack={true} nav={props} />
 
             <View style={styles.pickerContainer}>
                 <CountryPicker onChange={onChange} />
