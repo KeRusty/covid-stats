@@ -6,9 +6,6 @@ import styles from './AppHeader-styles'
 
 export default function AppHeader(props) {
 
-    console.log(props)
-
-
     return (
         <Container>
 
