@@ -4,7 +4,16 @@ export default StyleSheet.create({
     header: {
         backgroundColor: '#6a59f2'
     },
+    headerBody: {
+        flex: 3,
+        justifyContent: 'center'
+    },
     headerText: {
+        color: '#ffffff',
+        fontSize: 12,
+        fontWeight: 'bold'
+    },
+    icon: {
         color: '#ffffff',
     },
     tabStyle: {

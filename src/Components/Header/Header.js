@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Header, Body, Title, Tabs, Tab, View } from 'native-base';
+import { Container, Header, Body, Button, Icon, Tabs, Tab, Left, Right, View } from 'native-base';
+import { Text } from 'react-native';
 
 import Local from '../../Views/Local/Local';
 import Global from '../../Views/Global/Global';
@@ -7,16 +8,40 @@ import Hospital from '../../Views/Hospital/Hospital';
 
 import styles from './Header-styles'
 
-export default function AppHeader() {
+export default function AppHeader(props) {
 
     return (
         <Container>
 
             <Header style={styles.header} hasTabs>
 
+                <Left>
+
+                    {props.showBack &&
+                        <Button transparent onPress={() => { props.nav.navigation.goBack(); }}>
+
+                            <Icon name='arrow-back' style={styles.icon} />
+
+                        </Button>
+                    }
+
+                </Left>
+
                 <Body>
-                    <Title style={styles.headerText}>COVID-19 Statistics Sri Lanka</Title>
+                    <Text style={styles.headerText}>Sri Lanka Stats</Text>
                 </Body>
+
+                <Right>
+
+                    {props.showMenu &&
+                        <Button transparent>
+
+                            <Icon name='menu' style={styles.icon} />
+
+                        </Button>
+                    }
+
+                </Right>
 
             </Header>
 

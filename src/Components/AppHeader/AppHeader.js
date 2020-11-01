@@ -6,7 +6,8 @@ import styles from './AppHeader-styles'
 
 export default function AppHeader(props) {
 
-    const { title, showBack, showMenu } = props;
+    console.log(props)
+
 
     return (
         <Container>
@@ -15,8 +16,8 @@ export default function AppHeader(props) {
 
                 <Left>
 
-                    {showBack &&
-                        <Button transparent>
+                    {props.showBack &&
+                        <Button transparent onPress={() => { props.nav.navigation.goBack(); }}>
 
                             <Icon name='arrow-back' style={styles.icon} />
 
@@ -27,13 +28,13 @@ export default function AppHeader(props) {
 
                 <Body style={styles.headerBody}>
 
-                    <Text style={styles.headerText}>{title}</Text>
+                    <Text style={styles.headerText}>{props.title}</Text>
 
                 </Body>
 
                 <Right>
 
-                    {showMenu &&
+                    {props.showMenu &&
                         <Button transparent>
 
                             <Icon name='menu' style={styles.icon} />
