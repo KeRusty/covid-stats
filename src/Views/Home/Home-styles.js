@@ -3,26 +3,35 @@ import { StyleSheet } from 'react-native'
 export default StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff'
-    },
-    heading: {
-        paddingVertical: 12,
+        backgroundColor: '#6a59f2',
         justifyContent: 'center',
-        alignItems: 'center'
     },
-    headingMainText: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        color: '#2b244c'
+    header: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 60,
+        marginBottom: 80,
     },
-    headingSubText: {
+    scroll: {
+        marginVertical: 80,
+        flex: 1
+    },
+    contentBox: {
+        backgroundColor: '#ffffff',
+        marginBottom: 16,
+        marginHorizontal: 56,
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingVertical: 32,
+        borderRadius: 16,
+    },
+    headerText: {
+        fontSize: 32,
+        fontWeight: 'bold'
+    },
+    buttonText: {
         fontSize: 20,
-        fontWeight: 'bold',
-        color: '#2b244c'
-    },
-    headingTimeText: {
-        fontSize: 16,
-        fontWeight: 'bold',
-        color: '#000000'
+        fontWeight: '700',
+        color: '#6a59f2',
     }
 })
