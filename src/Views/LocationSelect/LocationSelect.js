@@ -11,20 +11,23 @@ export default function LocationSelect() {
     const [loading, setLoading] = useState(true);
     const [data, setData] = useState();
 
-    useEffect(() => {
-        fetch('https://corona.lmao.ninja/v2/countries/Italy?yesterday&strict&query%20')
-            .then((response) => response.json())
-            .then((json) => setData(json))
-            .catch((error) => console.error(error))
-            .finally(() => setLoading(false));
-    }, []);
-
-    console.log(data, "DATA")
-
     const onChange = useCallback((values) => {
         console.log(values, "LS")
 
+        if (values) {
+            let country = values.split(",")
+
+            fetch(`https://corona.lmao.ninja/v2/countries/${country[0]}?yesterday&strict&query%${country[1]}`)
+                .then((response) => response.json())
+                .then((json) => setData(json))
+                .catch((error) => console.error(error))
+                .finally(() => setLoading(false));
+
+        }
+
     }, []);
+
+    console.log(data, "DATA")
 
     return (
         <View style={styles.container}>
