@@ -13,6 +13,7 @@
     "axios": "^0.19.2",
     "expo": "^39.0.0",
     "native-base": "^2.13.12",
+    "node-fetch": "^2.6.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.3.tar.gz",

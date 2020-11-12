@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View, ScrollView } from 'react-native';
+import fetch from 'node-fetch';
 
 import Tests from '../../Components/PCRTestBox/PCRTestBox';
 import Hospitals from '../../Components/Hospitals/Hospitals';
