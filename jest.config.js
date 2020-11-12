@@ -6,8 +6,7 @@ module.exports = {
         preset: 'jest-expo',
         transformIgnorePatterns: [
             'node_modules/(?!((jest-)?react-native|react-clone-referenced-element|expo(nent)?|@unimodules/.*|jest-expo/.*|@expo(nent)?/.*|react-navigation|@react-navigation/.*|sentry-expo|native-base))',
-        ],
-        '.*': './jest/preprocessor.js',
+        ]
     },
     'setupFiles': [
         './jest/setup.js',
