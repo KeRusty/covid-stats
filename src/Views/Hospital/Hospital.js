@@ -19,12 +19,11 @@ export default function Hospital() {
             .finally(() => setLoading(false));
     }, []);
 
-    const hospitalData = !loading ? data.data.hospital_data : [];
-
     return (
         <View style={styles.container}>
 
             {!loading &&
+                data.data &&
                 <ScrollView contentContainerStyle={styles.scrollview}>
 
                     <View style={styles.heading}>
@@ -35,7 +34,7 @@ export default function Hospital() {
 
                     </View>
 
-                    {hospitalData.map((data, key) => (
+                    {data.data.hospital_data.map((data, key) => (
                         <Hospitals
                             key={key}
                             content={data}
