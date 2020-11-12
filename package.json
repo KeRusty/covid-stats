@@ -33,10 +33,7 @@
     "react-test-renderer": "^17.0.1"
   },
   "jest": {
-    "preset": "jest-expo",
-    "transformIgnorePatterns": [
-      "node_modules/*"
-    ]
+    "preset": "jest-expo"
   },
   "private": true
 }
