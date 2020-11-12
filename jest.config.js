@@ -7,8 +7,6 @@ module.exports = {
         transformIgnorePatterns: [
             'node_modules/(?!((jest-)?react-native|react-clone-referenced-element|expo(nent)?|@unimodules/.*|jest-expo/.*|@expo(nent)?/.*|react-navigation|@react-navigation/.*|sentry-expo|native-base))',
         ],
-        '^.+\\.(bmp|gif|jpg|jpeg|mp4|png|psd|svg|webp)$': require.resolve(
-            './proxy/assetFileTransformer.js'),
         '.*': './jest/preprocessor.js',
     },
     'setupFiles': [
