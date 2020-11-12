@@ -6,7 +6,7 @@ import Hospitals from '../../Components/Hospitals/Hospitals';
 
 import styles from './Hospital-styles'
 
-export default function Local() {
+export default function Hospital() {
 
     const [loading, setLoading] = useState(true);
     const [data, setData] = useState();
