@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, Header, Body, Button, Icon, Tabs, Tab, Left, Right, View } from 'native-base';
+import { Container, Header, Body, Button, Tabs, Tab, Left, Right } from 'native-base';
 import { Text } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 import Local from '../../Views/Local/Local';
 import Global from '../../Views/Global/Global';
@@ -20,7 +21,7 @@ export default function AppHeader(props) {
                     {props.showBack &&
                         <Button transparent onPress={() => { props.nav.navigation.goBack(); }}>
 
-                            <Icon name='arrow-back' style={styles.icon} />
+                            <Ionicons name="ios-arrow-back" size={32} style={styles.icon} />
 
                         </Button>
                     }
@@ -36,7 +37,7 @@ export default function AppHeader(props) {
                     {props.showMenu &&
                         <Button transparent>
 
-                            <Icon name='menu' style={styles.icon} />
+                            <Ionicons name="md-menu" size={32} style={styles.icon} />
 
                         </Button>
                     }

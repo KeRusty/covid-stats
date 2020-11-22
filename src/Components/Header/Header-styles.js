@@ -15,6 +15,7 @@ export default StyleSheet.create({
     },
     icon: {
         color: '#ffffff',
+        marginLeft: 4
     },
     tabStyle: {
         backgroundColor: '#6a59f2'
