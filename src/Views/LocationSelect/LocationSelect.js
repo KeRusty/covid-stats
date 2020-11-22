@@ -26,7 +26,7 @@ export default function LocationSelect(props) {
         }
 
     }, []);
-
+console.log(!loading ?data:null)
     return (
         <View style={styles.container}>
 
