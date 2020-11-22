@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View, ScrollView } from 'react-native';
+import fetch from 'node-fetch';
 
 import Tests from '../../Components/PCRTestBox/PCRTestBox';
 import Hospitals from '../../Components/Hospitals/Hospitals';
 
 import styles from './Hospital-styles'
 
-export default function Local() {
+export default function Hospital() {
 
     const [loading, setLoading] = useState(true);
     const [data, setData] = useState();
@@ -19,12 +20,11 @@ export default function Local() {
             .finally(() => setLoading(false));
     }, []);
 
-    const hospitalData = !loading ? data.data.hospital_data : [];
-
     return (
         <View style={styles.container}>
 
             {!loading &&
+                data.data &&
                 <ScrollView contentContainerStyle={styles.scrollview}>
 
                     <View style={styles.heading}>
@@ -35,7 +35,7 @@ export default function Local() {
 
                     </View>
 
-                    {hospitalData.map((data, key) => (
+                    {data.data.hospital_data.map((data, key) => (
                         <Hospitals
                             key={key}
                             content={data}

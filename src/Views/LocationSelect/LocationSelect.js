@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Text, View, ScrollView } from 'react-native';
+import fetch from 'node-fetch';
 
 import AppHeader from '../../Components/AppHeader/AppHeader';
 import CountryPicker from '../../Components/CountryPicker/CountryPicker';
