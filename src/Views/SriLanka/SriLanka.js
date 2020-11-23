@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Text, TouchableOpacity, ScrollView, View } from 'react-native';
+import React from 'react';
+import { View } from 'react-native';
 
 import Header from '../../Components/Header/Header';
 

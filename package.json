@@ -6,12 +6,16 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "test": "jest"
+    "test": "jest --watchAll"
   },
   "dependencies": {
+    "@expo/vector-icons": "^10.0.0",
     "@react-native-community/masked-view": "0.1.10",
     "axios": "^0.19.2",
     "expo": "^39.0.0",
+    "expo-constants": "~9.2.0",
+    "expo-font": "~8.3.0",
+    "expo-linking": "^1.0.1",
     "native-base": "^2.13.12",
     "node-fetch": "^2.6.1",
     "react": "16.13.1",
